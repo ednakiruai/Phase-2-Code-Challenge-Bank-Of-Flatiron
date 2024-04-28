@@ -1,18 +1,18 @@
 import  React, { useState } from "react"
 import "../index.css"
 
-function ListingItems({onSubmitData}){
+function TransactionForm({onSubmitData}){
     const [formData,setFormData] = useState({
         date:"",
         description:"",
         category:"",
         amount:""
     })
-    function handleChange(event){
+    const handleChange = (event)=> {
         const {name, value} = event.target;
-        setFormData(formData => ({...formData, [name]:value}))
-    }
-    function handleSubmit(event){
+        setFormData({...formData, [name]:value})
+    };
+    const handleSubmit = (event) => {
         event.preventDefault();
         onSubmitData(formData);
 
@@ -44,4 +44,4 @@ function ListingItems({onSubmitData}){
         </form>
     )
 }
-export default ListingItems;
+export default TransactionForm;

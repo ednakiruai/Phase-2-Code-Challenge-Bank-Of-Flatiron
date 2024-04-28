@@ -1,14 +1,16 @@
 
 function Row({transactions}){
 
-    const data = transactions.map((transactions) => {
+    const data = transactions.map((transaction, index) => {
         return(
-    <tr className="table table-light" key={transactions.id}>
-        <td>{transactions.date}</td>
-        <td>{transactions.description}</td>
-        <td>{transactions.category}</td>
-        <td>{transactions.amount}</td>
+            <tbody key={index+1}>
+    <tr className="table table-light">
+        <td>{transaction.date}</td>
+        <td>{transaction.description}</td>
+        <td>{transaction.category}</td>
+        <td>{transaction.amount}</td>
     </tr>
+    </tbody>
         )
     })
     return(

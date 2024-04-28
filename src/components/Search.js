@@ -1,10 +1,6 @@
 import React from "react";
 
-function Search({search,setSearch}) {
-
-  const onSearchChange = (event) => {
-    setSearch(event.target.value);
-  };
+function Search({search,handleChange}) {
   
     return (
       <div>
@@ -13,8 +9,8 @@ function Search({search,setSearch}) {
           className="form-control"
           placeholder="Search your Recent Transactions"
           name="search"
-          value={search}
-          onChange={onSearchChange}
+          // value={search}
+          onChange={handleChange}
         />
       </div>
     );
