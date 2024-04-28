@@ -18,4 +18,4 @@ function Row({transactions}){
              {data}
       </>
     );
-}export default Row
+}export default Row;

@@ -3,7 +3,6 @@ import Header from './components/Header';
 import './App.css';
 import Search from './components/Search';
 import TransactionForm from './components/TransactionForm'
-// import filter from './components/Filter'
 import React, { useState } from 'react';
 
 
